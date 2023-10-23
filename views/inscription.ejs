@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/inscription.css" />
+  </head>
+  <body>
+    <div class="cards">
+      <!-- <div class="card1"></div> -->
+      <div class="card2">
+        <div class="croix">
+          <a href="/"><img src="/picture/ferme1.png" alt="" /></a>
+        </div>
+        <h3>Inscription</h3>
+        <form method="post" action="/inscription">
+          <div class="input">
+            <div class="champs" style="margin-bottom: 60px; margin-top: 25px">
+              <input
+                type="text"
+                name="nom"
+                id="nom"
+                placeholder="   enter votre nom"
+              />
+            </div>
+            <div class="champs" style="margin-bottom: 60px">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="   entrer votre mail"
+              />
+              <% if (typeof alert !="undefined" && alert.email.message) { %>
+                <div class="validation">
+                  <%= alert.email.message %> <br>
+                </div>
+              <% }%>
+            </div>
+            <div class="champs" style="margin-bottom: 60px">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="  entrer votre mot de pass"
+              />
+              <% if (typeof alert !="undefined" && alert.password.message) { %>
+                <div class="validation">
+                  <%= alert.password.message %> <br>
+                </div>
+              <% }%>
+            </div>
+            <div class="champs">
+              <input
+                type="number"
+                name="numero"
+                id="numero"
+                placeholder="  entrer votre contact"
+              />
+              
+            </div>
+            <div class="champs">
+              <input type="hidden" name="statut" id="statut" value="L" />
+            </div>
+          </div>
+          <div>
+            <input type="submit" value="Inscription" class="inscription" />
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </body>
+</html>

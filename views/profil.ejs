@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/profil.css" />
+    <link rel="stylesheet" href="/css/hearder2.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- logo -->
+      <a href="index2" class="logo">Md Service</a>
+      <!-- menu navigation -->
+      <!-- icons hanberguer -->
+      <ul class="nav-links">
+        <input type="checkbox" id="papa" />
+        <label for="papa" class="hamburger">&#9776;</label>
+
+        <div class="menu">
+          <li><a href="index2">Accueil</a></li>
+          <li><a href="index2">Livres</a></li>
+          <li><a href="contact">Contact</a></li>
+
+          <li><a href="/" id="principale"></a></li>
+
+          <li>
+            <a href="./coporate/profil.html"
+              ><img src="../picture/panier.svg" alt="" /><span id="count"
+                >(0)</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="./profil"
+              ><img src="../picture/profil.svg" alt=""
+            /><span>
+              <% if (typeof nom !="undefined" && nom) { %>
+                <span class="validation">
+                  <%= nom %> <br>
+                </span>
+              <% }%>
+            </span></a>
+          </li>
+          <li><a href="/deconnexion">Deconnexion</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="partie1">
+      <div class="card2">
+        <div class="carre">
+          <div class="rond"></div>
+        </div>
+        <div class="text">
+          <p><span>
+            <% if (typeof nom !="undefined" && nom) { %>
+              <span class="validation">
+                <%= nom %> <br>
+              </span>
+            <% }%>
+          </span></p>
+          <p><span>
+            <% if (typeof nom !="undefined" && nom) { %>
+              <span class="validation">
+                <%= email %> <br>
+              </span>
+            <% }%>
+          </span></p>
+        </div>
+        <button class="envoyer"><a href="./edit.html">Editer</a></button>
+      </div>
+
+      <!-- bien -->
+
+      <div class="card3">
+        <h3>Historique</h3>
+      </div>
+    </div>
+
+    <footer>
+      <div class="box">
+        <div class="card1">
+          <h3 class="titre" style="margin-top: 25px">
+            A propos
+            <div class="urderline"><span></span></div>
+          </h3>
+          <p class="tt" style="font-size: 14px">
+            Hello ,nous somme Salamstreaming un site de streaming légal de
+            vidéos islamiques. Vous y retrouverez de nombreuses histoire,des
+            debats religieuxdes videos de meditation ainsi que dessins animés
+            pour les grands et les petits
+          </p>
+        </div>
+        <div class="card2">
+          <h3 class="titre">
+            Rejoignez Nous
+            <div class="urderline"><span></span></div>
+          </h3>
+          <p>
+            <a href=""><img src="/picture/facebook.svg" alt="" /></a>
+            <a href="" style="margin-left: 5px; margin-right: 5px">
+              <img src="/picture/telegram.svg" alt=""
+            /></a>
+            <a href=""><img src="/picture/whatsapp-128.svg" alt="" /></a>
+          </p>
+        </div>
+        <div class="card3">
+          <h3 class="titre">
+            Contacter Nous
+            <div class="urderline"><span></span></div>
+          </h3>
+          <p>01 53 53 50 65</p>
+          <p>01 53 53 50 65</p>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <div class="copy">copyright © 2023 mena - côte d'ivoire</div>
+    </footer>
+  </body>
+</html>

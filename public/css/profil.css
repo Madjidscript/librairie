@@ -1,0 +1,99 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.partie1 {
+  width: 60%;
+  margin: 0px auto;
+  height: auto;
+  /* background-color: #ccc; */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.partie1 .card2 {
+  width: 300px;
+  height: 410px;
+  background-color: #eab52e;
+  text-align: center;
+  border-radius: 10px;
+  border-radius: 15px;
+}
+.carre {
+  width: 100%;
+  height: 30%;
+  background-color: #298fc2;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  padding: 10px;
+  border-radius: 15px 15px 0px 0px;
+}
+.carre .rond {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background: url(../images/madjid.jpg);
+  background-color: #fff;
+  background-size: cover;
+  bottom: -30px;
+  position: absolute;
+}
+.text {
+  margin-top: 75px;
+}
+.text p {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 20px;
+  white-space: wrap;
+}
+.envoyer {
+  width: 150px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #298fc2;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 10.18px;
+}
+.envoyer a {
+  text-decoration: none;
+  color: white;
+}
+
+.croix a img {
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  position: absolute;
+  display: none;
+}
+/* @media (max-width: 600px) {
+      .champs {
+        width: 100%;
+      }
+    } */
+
+.content #profil {
+  display: flex;
+  border-radius: 5px;
+}
+
+.partie1 .card3 {
+  width: 300px;
+  height: 410px;
+  background-color: #f4da96;
+  border-radius: 10px;
+  border-radius: 15px;
+  padding: 10px;
+}

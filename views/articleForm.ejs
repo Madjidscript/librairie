@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/inscription.css" />
+  </head>
+  <body>
+    <div class="cards">
+      <!-- <div class="card1"></div> -->
+      <div class="card2">
+        <div class="croix">
+          <a href="/"><img src="/picture/ferme1.png" alt="" /></a>
+        </div>
+        <h3>Article</h3>
+        <form method="post" action="/articleForm" enctype="multipart/form-data">
+          <div class="input">
+            <div class="champs" style="margin-bottom: 60px; margin-top: 25px">
+              <input
+                type="file"
+                name="image"
+                id="image"
+                placeholder="   enter votre image"
+              />
+            </div>
+            <div class="champs" style="margin-bottom: 60px">
+              <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="entrer votre title"
+              />
+            </div>
+            <div class="champs" style="margin-bottom: 60px">
+              <input
+                type="number"
+                name="prix"
+                id="prix"
+                placeholder="  entrer votre prix"
+              />
+              
+            </div>
+            <div class="champs">
+              <input
+                type="text"
+                name="description"
+                id="description"
+                placeholder="  entrer votre description"
+              />
+              
+            </div>
+            <div class="champs">
+              <label for="choix">Choisissez une option :</label>
+               <select id="choix" name="categorie">
+                 <option value="islam">islam</option>
+                 <option value="politique">Politique</option>
+                 <option value="sportif">sportif</option>
+               </select>
+              
+            </div>
+            <div class="champs">
+              <input type="hidden" name="statut" id="statut" value="L" />
+            </div>
+          </div>
+          <div>
+            <input type="submit" value="Envoyer" class="inscription" />
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </body>
+</html>

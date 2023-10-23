@@ -1,0 +1,27 @@
+const express = require("express");
+const premierPage = require("../controller/controller_index");
+const multer = require('multer')
+const upload = multer({dest: 'stokage/'});
+const router = express.Router();
+
+
+
+router.get("/",  premierPage.firstChild);
+router.get("/index2", premierPage.secondchild);
+router.get("/connexion", premierPage.connexionPage);
+router.post("/connexion",premierPage.connexionPagePost)
+router.get("/inscription", premierPage.inscriptionPage);
+router.post('/inscription',premierPage.inscriptionPagePost)
+router.get("/profil", premierPage.ProfilPage);
+router.get("/profil/editer", premierPage.editPage);
+router.get("/contact", premierPage.contactPage);
+router.get("/islamique", premierPage.islamiquetPage);
+router.get("/politique", premierPage.politiquePage);
+router.get("/sportif", premierPage.sportiftPage);
+router.get("/categorieForm", premierPage.categoriePage);
+router.post("/categorieForm", premierPage.categoriePagePost);
+router.get("/articleForm", premierPage.articlePage);
+router.post("/articleForm", upload.single('image'),premierPage.articlePagePost);
+router.get("/deconnexion", premierPage.deconnexionPage);
+
+module.exports = router;

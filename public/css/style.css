@@ -1,0 +1,214 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.partie1 {
+  width: 100%;
+  height: 450px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+}
+
+.container {
+  position: relative;
+  min-height: auto;
+  /* padding-bottom: 20px; */
+  /* background-color: white; */
+}
+.text {
+  color: black;
+
+  padding: 15px;
+  font-size: 10px;
+  top: -70px;
+  left: 10px;
+  font-weight: normal;
+  background-color: #eab52e;
+  border-radius: 0px 68px 0px 0px;
+  border-bottom: 2px solid #298fc2;
+  width: 200px;
+  position: absolute;
+}
+.container .card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+  /* margin-top: 90px; */
+}
+.container .card .carre {
+  height: auto;
+  padding: 15px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 1.14px 0px 1.14px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  position: relative;
+
+  /* overflow: hidden; */
+}
+.container .card .carre:hover {
+  scale: 1.1;
+  transition: 2s;
+  margin: 10px 30px;
+}
+
+.container .card .carre .image {
+  width: 200px;
+  height: 100px;
+  background-color: #f4da96;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .card .carre .prix {
+  width: 200px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.prix .titre {
+  margin-bottom: 10px;
+}
+.container .card .carre .bouton {
+  width: 200px;
+  height: 40px;
+  background-color: #eab52e;
+  padding: 0px 10px;
+  color: #298fc2;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* partie temoignage */
+/* partie temoignage */
+.content {
+  /* position: relative; */
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0px auto;
+  /* background-color: red; */
+  /* overflow: hidden; */
+}
+
+.content .box2 {
+  width: 100%;
+  margin: 0px auto;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 35px;
+  /* background-color: #00c853; */
+}
+.content .box2 .cardre {
+  height: auto;
+  width: 350px;
+  padding: 10px 0px 20px 0px;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  background-color: #f4da96;
+  position: relative;
+  color: black;
+  border-radius: 1rem;
+}
+
+.cardre .image {
+  background-size: cover;
+  background-position: center center;
+  /* position: absolute; */
+  margin: 20px auto;
+}
+.cardre .texts p {
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgb(255, 255, 255);
+  color: black;
+  font-weight: 200px;
+}
+.reference {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+
+  line-height: 80px;
+  margin: 0px auto;
+}
+.reference .numero {
+  height: auto;
+  width: auto;
+  margin-top: 13px;
+}
+.reference .nom p {
+  font-weight: bold;
+  color: #00c853;
+  font-size: 20px;
+}
+
+.cadres {
+  width: 50vw;
+  height: 50vh;
+  background-color: white;
+  /* border: 1px solid #298fc2; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: 15px;
+  color: black;
+  display: none;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.cadres .croix {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #298fc2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cadres .bouton {
+  width: 300px;
+  /* background-color: #00c853; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.bt {
+  width: auto;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: #eab52e;
+}

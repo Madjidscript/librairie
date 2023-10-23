@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/connexion.css" />
+  </head>
+  <body>
+    <div class="cards">
+      <!-- <div class="card1"></div> -->
+      <div class="card2">
+        <div class="croix">
+          <a href="/"><img src="/picture/ferme1.png" alt="" /></a>
+        </div>
+        <% if (typeof alert !="undefined" && alert) { %>
+                <div class="validation">
+                  <%= alert %> <br>
+                </div>
+              <% }%>
+        <h3>Connexion</h3>
+        <form action="/connexion" method="post">
+          <div class="input">
+            <div class="champs" style="margin-bottom: 60px">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="email"
+                placeholder="   entrer votre mail"
+              />
+            </div>
+            <div class="champs" style="margin-bottom: 30px">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="password"
+                placeholder="  entrer votre mot de pass"
+              />
+            </div>
+          </div>
+          <div><input type="submit" value="Connexion" class="connexion" /></div>
+          <p style="color: white; margin-bottom: 10px">
+            vous avez pas de compte
+            <strong style="color: #00c853"
+              ><a href="./inscription">crer en un</a></strong
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

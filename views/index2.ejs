@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style2.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/hearder2.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- logo -->
+      <a href="index2" class="logo">Md Service</a>
+      <!-- menu navigation -->
+      <!-- icons hanberguer -->
+      <ul class="nav-links">
+        <input type="checkbox" id="papa" />
+        <label for="papa" class="hamburger">&#9776;</label>
+
+        <div class="menu">
+          <li><a href="index2">Accueil</a></li>
+          <li><a href="index2">Livres</a></li>
+          <li><a href="contact">Contact</a></li>
+
+          <li><a href="/" id="principale"></a></li>
+
+          <li>
+            <a href=""
+              ><img src="../picture/panier.svg" alt="" /><span id="count">(0)</span></a
+            >
+          </li>
+          <li>
+            <a href="./profil" 
+              ><img src="../picture/profil.svg" alt=""
+            /><span>
+              <% if (typeof nom !="undefined" && nom) { %>
+                <span class="validation">
+                  <%= nom %> <br>
+                </span>
+              <% }%>
+            </span></a>
+          </li>
+          <li><a href="/deconnexion">Deconnexion</a></li>
+        </div>
+      </ul>
+    </nav>
+
+
+
+    <div class="partie1">
+      <div class="carre1"></div>
+      <div class="carre2"></div>
+    </div>
+  
+
+    <!-- partie livre islamique -->
+    <div class="container" id="">
+     
+     
+      <div class="card"  style="margin-top: 90px;">
+        <div  class="carre">
+          <div class="text">
+            <h1>Livres Islamique</h1>
+          </div>
+
+          <div class="image">
+            <img src="../picture/coran-removebg-preview.png" alt="" height="100px" width="100px">
+          </div>
+          <div class="prix">
+            <div class="titre">CORAN</div>
+            <div class="price">Prix:200$</div>
+          </div>
+          <div class="bouton">
+            <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+            <div class="texte">Ajouter Au Panier</div>
+          </div>
+
+
+        </div>
+        <div  class="carre">
+          <div class="image"><img src="../picture/coran-removebg-preview.png" alt="" height="100px" width="100px"></div>
+          <div class="prix">
+            <div class="titre">CORAN</div>
+            <div class="price">Prix:200$</div>
+          </div>
+          <div class="bouton">
+            <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+            <div class="texte">Ajouter Au Panier</div>
+          </div>
+        </div>
+
+        <div class="carre">
+          <div class="image">
+            <img src="../picture/coran-removebg-preview.png" alt="" height="100px" width="100px">
+          </div>
+          <div class="prix">
+            <div class="titre">CORAN</div>
+            <div class="price">Prix:200$</div>
+          </div>
+          <div class="bouton">
+            <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+            <div class="texte">Ajouter Au Panier</div>
+          </div>
+          <a href="./islamique" class="bouton2">voir plus</a>
+        </div>
+        
+      </div>
+
+
+
+
+      <!-- partie livre Politique -->
+    <div class="container">
+     
+     
+      <div class="card"  style="margin-top: 150px;">
+        <div  class="carre">
+          <div class="text">
+            <h1>Livres Politiques</h1>
+          </div>
+
+          <div class="image">
+            <img src="../picture/politiqu4-removebg-preview.png" alt="" height="100px" width="100px">
+          </div>
+          <div class="prix">
+            <div class="titre">MANDELA</div>
+            <div class="price">Prix:200$</div>
+          </div>
+          <div class="bouton">
+            <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+            <div class="texte">Ajouter Au Panier</div>
+          </div>
+
+
+        </div>
+        <div  class="carre">
+          <div class="image"><img src="../picture/politiqu4-removebg-preview.png" alt="" height="100px" width="100px"></div>
+          <div class="prix">
+            <div class="titre">MANDELA</div>
+            <div class="price">Prix:200$</div>
+          </div>
+          <div class="bouton">
+            <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+            <div class="texte">Ajouter Au Panier</div>
+          </div>
+        </div>
+
+        <div class="carre">
+          <div class="image">
+            <img src="../picture/politiqu4-removebg-preview.png" alt="" height="100px" width="100px">
+          </div>
+          <div class="prix">
+            <div class="titre">MANDELA</div>
+            <div class="price">Prix:200$</div>
+          </div>
+          <div class="bouton">
+            <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+            <div class="texte">Ajouter Au Panier</div>
+            <a href="./politique" class="bouton2">voir plus</a>
+          </div>
+        </div>
+        
+      </div>
+
+
+      <!-- partie livre sportif -->
+    <div class="container">
+     
+     
+      <div class="card" style="margin-top: 150px;">
+        <div  class="carre">
+          <div class="text">
+            <h1>Livres Sportif</h1>
+          </div>
+
+          <div class="image">
+            <img src="../picture/sport1-removebg-preview.png" alt="" height="100px" width="100px">
+          </div>
+          <div class="prix">
+            <div class="titre">PELE</div>
+            <div class="price">Prix:200$</div>
+          </div>
+          <div class="bouton">
+            <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+            <div class="texte">Ajouter Au Panier</div>
+          </div>
+
+
+        </div>
+        <div  class="carre">
+          <div class="image"><img src="../picture/sport1-removebg-preview.png" alt="" height="100px" width="100px"></div>
+          <div class="prix">
+            <div class="titre">PELE</div>
+            <div class="price">Prix:200$</div>
+          </div>
+          <div class="bouton">
+            <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+            <div class="texte">Ajouter Au Panier</div>
+          </div>
+        </div>
+
+        <div class="carre">
+          <div class="image">
+            <img src="../picture/sport1-removebg-preview.png" alt="" height="100px" width="100px">
+          </div>
+          <div class="prix">
+            <div class="titre">PELE</div>
+            <div class="price">Prix:200$</div>
+          </div>
+          <div class="bouton">
+            <div class="img"><a href=""><img src=".../picture/panier.svg" alt=""></a></div>
+            <div class="texte">Ajouter Au Panier</div>
+          </div>
+          <a href="./sportif" class="bouton2">voir plus</a>
+        </div>
+        
+      </div>
+
+    </div>
+    <script src="../js_frontend/index2.js"></script>
+    <script src="../js_frontend/panier.js"></script>
+  </body>
+</html>

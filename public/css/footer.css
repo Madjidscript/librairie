@@ -1,0 +1,107 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #eab52e;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 125px;
+}
+footer .box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80%;
+  height: 30%;
+  /* background-color: rebeccapurple; */
+  margin: 0px auto;
+}
+footer .box .card1 {
+  width: 300px;
+  height: 190px;
+  margin-top: 30px;
+  /* background-color: gray; */
+  padding-left: 4px;
+  /* text-align: center; */
+}
+
+footer .box .card2 {
+  width: 300px;
+  height: 100px;
+  /* background-color: gray; */
+  text-align: center;
+}
+p a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 3px solid white;
+}
+footer .box .card3 {
+  width: 300px;
+  height: 100px;
+  /* background-color: gray; */
+  text-align: center;
+}
+footer .box h3 {
+  color: #298fc2;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 25px;
+  overflow: hidden;
+  position: relative;
+}
+h3 .urderline {
+  position: absolute;
+  width: 60%;
+  height: 5px;
+  border-radius: 3px;
+  top: 30px;
+  left: 60px;
+  background-color: white;
+  display: flex;
+}
+h3 .urderline span {
+  width: 15px !important;
+  height: 100%;
+  background-color: black;
+  border-radius: 3px;
+  top: 0px;
+  left: 10px;
+  position: relative;
+  animation: balade 2s linear infinite;
+}
+
+@keyframes balade {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+hr {
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid white;
+  margin: 0px auto;
+}
+.copy {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #eab52e;
+  color: #298fc2;
+}
+.description {
+  color: #298fc2;
+  margin-top: 20px;
+}
