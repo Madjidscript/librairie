@@ -55,6 +55,8 @@ body {
 .menu li {
   padding: 5px 14px;
   line-height: 60px;
+  list-style: none;
+
 }
 
 input[type="checkbox"] {

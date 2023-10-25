@@ -96,78 +96,10 @@
 
 /* partie temoignage */
 /* partie temoignage */
-.content {
-  /* position: relative; */
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  margin: 0px auto;
-  /* background-color: red; */
-  /* overflow: hidden; */
-}
 
-.content .box2 {
-  width: 100%;
-  margin: 0px auto;
-  display: flex;
-  text-align: center;
-  justify-content: space-around;
-  position: relative;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 35px;
-  /* background-color: #00c853; */
-}
-.content .box2 .cardre {
-  height: auto;
-  width: 350px;
-  padding: 10px 0px 20px 0px;
-  cursor: pointer;
-  overflow: hidden;
-  display: block;
-  text-align: center;
-  background-color: #f4da96;
-  position: relative;
-  color: black;
-  border-radius: 1rem;
-}
 
-.cardre .image {
-  background-size: cover;
-  background-position: center center;
-  /* position: absolute; */
-  margin: 20px auto;
-}
-.cardre .texts p {
-  text-align: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  color: rgb(255, 255, 255);
-  color: black;
-  font-weight: 200px;
-}
-.reference {
-  width: 90%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
 
-  line-height: 80px;
-  margin: 0px auto;
-}
-.reference .numero {
-  height: auto;
-  width: auto;
-  margin-top: 13px;
-}
-.reference .nom p {
-  font-weight: bold;
-  color: #00c853;
-  font-size: 20px;
-}
+
 
 .cadres {
   width: 50vw;

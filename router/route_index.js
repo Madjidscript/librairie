@@ -1,8 +1,8 @@
 const express = require("express");
 const premierPage = require("../controller/controller_index");
-const multer = require('multer')
-const upload = multer({dest: 'stokage/'});
+const upload = require("../middlewares/multer");
 const router = express.Router();
+
 
 
 
@@ -13,6 +13,7 @@ router.post("/connexion",premierPage.connexionPagePost)
 router.get("/inscription", premierPage.inscriptionPage);
 router.post('/inscription',premierPage.inscriptionPagePost)
 router.get("/profil", premierPage.ProfilPage);
+router.get("/detail",premierPage.detailPage)
 router.get("/profil/editer", premierPage.editPage);
 router.get("/contact", premierPage.contactPage);
 router.get("/islamique", premierPage.islamiquetPage);

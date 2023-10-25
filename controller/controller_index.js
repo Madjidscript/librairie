@@ -96,6 +96,14 @@ const premierPage = class {
       res.redirect('/connexion')
     }
   };
+  static detailPage = (req = request, res = response) => {
+    if (req.session.user) {
+      
+      return res.render("detail",{nom:req.session.user.nom,email:req.session.user.email,numero:req.session.user.numero});
+    } else {
+      res.redirect('/connexion')
+    }
+  };
 
   static editPage = (req = request, res = response) => {
     if (req.session.user) {
@@ -152,8 +160,11 @@ const premierPage = class {
   };
 
   static articlePagePost = async  (req = request, res = response) => {
-      
+      req.body.image =req.protocol +"://" + req.get('host')+"/"+req.file.path;
+      console.log(req.body.image);
       const Articles = new Article(req.body);
+      
+      console.log(req.file);
       try {
         const saveArticles = await Articles.save();
         res.status(201).redirect('/articleForm');

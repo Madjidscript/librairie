@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/css/profil.css" />
+    <link rel="stylesheet" href="/css/detail.css" />
     <link rel="stylesheet" href="/css/hearder2.css" />
     <link rel="stylesheet" href="/css/footer.css" />
   </head>
@@ -20,7 +20,7 @@
 
         <div class="menu">
           <li><a href="index2">Accueil</a></li>
-          <li><a href="index2">Livres</a></li>
+          <li><a href="index2">Detail</a></li>
           <li><a href="contact">Contact</a></li>
 
           <li><a href="/" id="principale"></a></li>
@@ -51,31 +51,19 @@
     <div class="partie1">
       <div class="card2">
         <div class="carre">
-          <div class="rond"></div>
+          <div class="image"></div>
         </div>
         <div class="text">
-          <p><span>
-            <% if (typeof nom !="undefined" && nom) { %>
-              <span class="validation">
-                <%= nom %> <br>
-              </span>
-            <% }%>
-          </span></p>
-          <p><span>
-            <% if (typeof nom !="undefined" && nom) { %>
-              <span class="validation">
-                <%= email %> <br>
-              </span>
-            <% }%>
-          </span></p>
+          <p>Livres</p>
+          <p>200000</p>
         </div>
-        <button class="envoyer"><a href="/profil/editer">Editer</a></button>
+        <button class="envoyer"><a href="#">Ajouter</a></button>
       </div>
 
       <!-- bien -->
 
       <div class="card3">
-        <h3>Historique</h3>
+        <h3>Description</h3>
       </div>
     </div>
 
@@ -108,7 +96,7 @@
         </div>
         <div class="card3">
           <h3 class="titre">
-            Contactez Nous
+            Contacter Nous
             <div class="urderline"><span></span></div>
           </h3>
           <p>01 53 53 50 65</p>

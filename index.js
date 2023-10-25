@@ -2,22 +2,12 @@ require('dotenv').config()
 const express = require("express");
 const app = express();
 const path = require("path");
-const multer = require('multer');
-
 const router_index = require("./router/route_index");
 const { connectdb } = require("./services/mongoose"); 
 const session = require('express-session')
 
 
 
-const storage = multer.diskStorage({
-  destination: function(req, file, callback) {
-    callback(null, '/stokage');
-  },
-  filename: function (req, file, callback) {
-    callback(null, file.fieldname);
-  }
-});
 
 app.use(session({
     secret: 'yaya', // Une chaîne secrète pour signer les cookies de session
@@ -29,8 +19,9 @@ app.use(session({
 connectdb().catch((e)=>console.log(e))
 
 const port =process.env.port || 3000;
+app.use('/uploads',express.static('./uploads'));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
-app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static("public"));
 app.set("views", path.join(__dirname, "views"));
