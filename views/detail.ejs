@@ -36,9 +36,9 @@
             <a href="./profil"
               ><img src="../picture/profil.svg" alt=""
             /><span>
-              <% if (typeof nom !="undefined" && nom) { %>
+              <% if (typeof user !="undefined" && user.nom) { %>
                 <span class="validation">
-                  <%= nom %> <br>
+                  <%= user.nom %> <br>
                 </span>
               <% }%>
             </span></a>
@@ -51,11 +51,23 @@
     <div class="partie1">
       <div class="card2">
         <div class="carre">
-          <div class="image"></div>
+          <div class="image"><% if (typeof article !="undefined" && article.image) { %>
+            <span class="validation">
+             <img src="<%= article.image %>" alt="" height="100%" width="100%">  <br>
+            </span>
+          <% }%></div>
         </div>
         <div class="text">
-          <p>Livres</p>
-          <p>200000</p>
+          <p><% if (typeof article !="undefined" && article.title) { %>
+            <span class="validation">
+              <%= article.title %> <br>
+            </span>
+          <% }%></p>
+          <p><% if (typeof article !="undefined" && article.prix) { %>
+            <span class="validation">
+              <%= article.prix %> <br>
+            </span>
+          <% }%></p>
         </div>
         <button class="envoyer"><a href="#">Ajouter</a></button>
       </div>
@@ -63,7 +75,11 @@
       <!-- bien -->
 
       <div class="card3">
-        <h3>Description</h3>
+        <h3><% if (typeof article !="undefined" && article.description) { %>
+          <span class="validation">
+            <%= article.description %> <br>
+          </span>
+        <% }%></h3>
       </div>
     </div>
 

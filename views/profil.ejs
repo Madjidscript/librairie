@@ -36,9 +36,9 @@
             <a href="./profil"
               ><img src="../picture/profil.svg" alt=""
             /><span>
-              <% if (typeof nom !="undefined" && nom) { %>
+              <% if (typeof user !="undefined" && user.nom) { %>
                 <span class="validation">
-                  <%= nom %> <br>
+                  <%= user.nom %> <br>
                 </span>
               <% }%>
             </span></a>
@@ -55,16 +55,16 @@
         </div>
         <div class="text">
           <p><span>
-            <% if (typeof nom !="undefined" && nom) { %>
+            <% if (typeof user !="undefined" && user.nom) { %>
               <span class="validation">
-                <%= nom %> <br>
+                <%= user.nom %> <br>
               </span>
             <% }%>
           </span></p>
           <p><span>
-            <% if (typeof nom !="undefined" && nom) { %>
+            <% if (typeof user !="undefined" && user.email) { %>
               <span class="validation">
-                <%= email %> <br>
+                <%= user.email %> <br>
               </span>
             <% }%>
           </span></p>

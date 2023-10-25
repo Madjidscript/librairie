@@ -13,7 +13,7 @@ router.post("/connexion",premierPage.connexionPagePost)
 router.get("/inscription", premierPage.inscriptionPage);
 router.post('/inscription',premierPage.inscriptionPagePost)
 router.get("/profil", premierPage.ProfilPage);
-router.get("/detail",premierPage.detailPage)
+router.get("/detail/:id",premierPage.detailPage)
 router.get("/profil/editer", premierPage.editPage);
 router.get("/contact", premierPage.contactPage);
 router.get("/islamique", premierPage.islamiquetPage);

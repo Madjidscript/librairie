@@ -12,9 +12,18 @@ const premierPage = class {
     res.render("index");
   };
 
-  static secondchild = (req = request, res = response) => {
+  static secondchild = async (req = request, res = response) => {
     if (req.session.user) {
-     return res.render("index2",{nom:req.session.user.nom,email:req.session.user.email,numero:req.session.user.numero});
+     try {
+      const Articles = await Article.find().exec();
+      console.log("mes article",Articles)      
+     return res.render("index2",{user:req.session.user,articles:Articles});
+
+     } catch (error) {
+      console.log(error);
+     }
+
+     
     } else {
       res.redirect('/connexion')
     }
@@ -91,15 +100,24 @@ const premierPage = class {
   static ProfilPage = (req = request, res = response) => {
     if (req.session.user) {
       
-      return res.render("profil",{nom:req.session.user.nom,email:req.session.user.email,numero:req.session.user.numero});
+      return res.render("profil",{user:req.session.user});
     } else {
       res.redirect('/connexion')
     }
   };
-  static detailPage = (req = request, res = response) => {
+  static detailPage =async (req = request, res = response) => {
     if (req.session.user) {
+
+const articleId = req.params.id;
+console.log("mon id",articleId);
+    try {
+      const Articles = await Article.findById(articleId);
+      console.log("mon article specifique",Articles);
       
-      return res.render("detail",{nom:req.session.user.nom,email:req.session.user.email,numero:req.session.user.numero});
+     return res.render("detail",{user:req.session.user, article:Articles});
+    } catch (error) {
+      res.status(500).send(error);
+    }
     } else {
       res.redirect('/connexion')
     }
@@ -115,14 +133,21 @@ const premierPage = class {
 
   static contactPage = (req = request, res = response) => {
     if (req.session.user) {
-      return res.render("contact",{nom:req.session.user.nom,email:req.session.user.email,numero:req.session.user.numero});
+      return res.render("contact",{user:req.session.user});
      } else {
        res.redirect('/connexion')
      }
   };
-  static islamiquetPage = (req = request, res = response) => {
+  static islamiquetPage = async(req = request, res = response) => {
     if (req.session.user) {
-      return res.render("islamique",{nom:req.session.user.nom,email:req.session.user.email,numero:req.session.user.numero});
+      try {
+        const Articles = await Article.find().exec();
+        console.log("mes article",Articles)      
+       return res.render("islamique",{user:req.session.user,articles:Articles});
+  
+       } catch (error) {
+        console.log(error);
+       }
      } else {
        res.redirect('/connexion')
      }
@@ -131,14 +156,14 @@ const premierPage = class {
     
     if (req.session.user) {
       
-      return res.render("sportif",{nom:req.session.user.nom,email:req.session.user.email,numero:req.session.user.numero});
+      return res.render("sportif",{user:req.session.user});
      } else {
        res.redirect('/connexion')
      }
   };
   static politiquePage = (req = request, res = response) => {
     if (req.session.user) {
-      return res.render("politique",{nom:req.session.user.nom,email:req.session.user.email,numero:req.session.user.numero});
+      return res.render("politique",{user:req.session.user});
      } else {
        res.redirect('/connexion')
      }
@@ -160,8 +185,9 @@ const premierPage = class {
   };
 
   static articlePagePost = async  (req = request, res = response) => {
-      req.body.image =req.protocol +"://" + req.get('host')+"/"+req.file.path;
-      console.log(req.body.image);
+      //req.body.image =req.protocol +"://" + req.get('host')+"/"+req.file.path;
+      req.body.image = req.file.path
+      console.log(req.body);
       const Articles = new Article(req.body);
       
       console.log(req.file);

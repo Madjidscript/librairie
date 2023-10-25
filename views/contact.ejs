@@ -36,9 +36,9 @@
             <a href="./profil"
               ><img src="../picture/profil.svg" alt=""
             /><span>
-              <% if (typeof nom !="undefined" && nom) { %>
+              <% if (typeof user !="undefined" && user.nom) { %>
                 <span class="validation">
-                  <%= nom %> <br>
+                  <%= user.nom %> <br>
                 </span>
               <% }%>
             </span></a>
