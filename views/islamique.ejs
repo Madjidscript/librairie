@@ -68,7 +68,7 @@
        <% if (article.categorie === 'islam') { %>
          <!-- Votre code HTML pour afficher un article ici -->
          <div class="carre">
-           <div class="image"><img src="<%= article.image %>" alt="" height="100px" width="100px"></div>
+           <a class="image" href="/detail/<%= article._id %>"><img src="<%= article.image %>" alt="" height="100px" width="100px"></a>
            <div class="prix">
              <div class="titre"><%= article.title %></div>
              <div class="price"><%= article.prix %>$</div>

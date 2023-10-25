@@ -40,7 +40,7 @@
 .carre .image{
   width: 200px;
   height: 100%;
-  background-image: url(../picture/politiqu4-removebg-preview.png);
+  
   background-size: cover;
   background-position: center center;
 }

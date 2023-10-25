@@ -144,6 +144,35 @@ console.log("mon id",articleId);
         const Articles = await Article.find().exec();
         console.log("mes article",Articles)      
        return res.render("islamique",{user:req.session.user,articles:Articles});
+
+       } catch (error) {
+        console.log(error);
+       }
+     } else {
+       res.redirect('/connexion')
+     }
+  };
+  
+  static sportiftPage = async (req = request, res = response) => {
+    if (req.session.user) {
+      try {
+        const Articles = await Article.find().exec();
+        console.log("mes article",Articles)      
+       return res.render("sportif",{user:req.session.user,articles:Articles});
+       } catch (error) {
+        console.log(error);
+       }
+     } else {
+       res.redirect('/connexion')
+     }
+  };
+
+  static politiquePage = async (req = request, res = response) => {
+    if (req.session.user) {
+      try {
+        const Articles = await Article.find().exec();
+        console.log("mes article",Articles)      
+       return res.render("politique",{user:req.session.user,articles:Articles});
   
        } catch (error) {
         console.log(error);
@@ -152,22 +181,7 @@ console.log("mon id",articleId);
        res.redirect('/connexion')
      }
   };
-  static sportiftPage = (req = request, res = response) => {
-    
-    if (req.session.user) {
-      
-      return res.render("sportif",{user:req.session.user});
-     } else {
-       res.redirect('/connexion')
-     }
-  };
-  static politiquePage = (req = request, res = response) => {
-    if (req.session.user) {
-      return res.render("politique",{user:req.session.user});
-     } else {
-       res.redirect('/connexion')
-     }
-  };
+  
   static categoriePage = (req = request, res = response) => {
       res.render("categorieForm");
   };

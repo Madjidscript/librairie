@@ -19,9 +19,9 @@
         <label for="papa" class="hamburger">&#9776;</label>
 
         <div class="menu">
-          <li><a href="index2">Accueil</a></li>
-          <li><a href="index2">Detail</a></li>
-          <li><a href="contact">Contact</a></li>
+          <li><a href="/index2">Accueil</a></li>
+          <li><a href="/index2">Detail</a></li>
+          <li><a href="/contact">Contact</a></li>
 
           <li><a href="/" id="principale"></a></li>
 
@@ -51,22 +51,24 @@
     <div class="partie1">
       <div class="card2">
         <div class="carre">
-          <div class="image"><% if (typeof article !="undefined" && article.image) { %>
-            <span class="validation">
-             <img src="<%= article.image %>" alt="" height="100%" width="100%">  <br>
-            </span>
-          <% }%></div>
+          <div class="image">
+            <% if (typeof article !="undefined" && article.image) { %>
+            
+             <img src="/<%= article.image %>" alt="" height="100%" width="100%">  <br>
+            
+          <% }%>
+        </div>
         </div>
         <div class="text">
           <p><% if (typeof article !="undefined" && article.title) { %>
-            <span class="validation">
+            
               <%= article.title %> <br>
-            </span>
+            
           <% }%></p>
           <p><% if (typeof article !="undefined" && article.prix) { %>
-            <span class="validation">
+            
               <%= article.prix %> <br>
-            </span>
+            
           <% }%></p>
         </div>
         <button class="envoyer"><a href="#">Ajouter</a></button>
@@ -76,9 +78,9 @@
 
       <div class="card3">
         <h3><% if (typeof article !="undefined" && article.description) { %>
-          <span class="validation">
+          
             <%= article.description %> <br>
-          </span>
+          
         <% }%></h3>
       </div>
     </div>

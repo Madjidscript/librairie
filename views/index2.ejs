@@ -61,13 +61,13 @@
  
  
 <div class="card"  style="margin-top: 90px;">
-      <% let displayedArticles = 0; %>
+  <% let displayedArticlesIslam = 0; %>
 
 <% articles.forEach(function(article) { %>
-  <% if (article.categorie === 'islam' && displayedArticles < 3) { %>
+  <% if (article.categorie === 'islam' && displayedArticlesIslam < 3) { %>
     <!-- Votre code HTML pour afficher un article ici -->
     <div class="carre">
-      <a class="image" href="/detail/<%= article._id %>"><img src="<%= article.image %>" alt="" height="100px" width="100px"></a>
+      <a class="image" href="/detail/<%= article._id %>"><img src="/<%= article.image %>" alt="" height="100px" width="100px"></a>
       <div class="prix">
         <div class="titre"><%= article.title %></div>
         <div class="price"><%= article.prix %>$</div>
@@ -81,123 +81,92 @@
     
     <!-- Fin du code HTML de l'article -->
 
-    <% displayedArticles++; %>
+    <% displayedArticlesIslam++; %>
   <% } %>
 <% }); %>
 
 
-<a href="/islamique">voir plus</a>
+
       
       
 </div>
   </div>
+  <a href="/islamique">voir plus</a>
     <!-- partie livre Politique -->
-  <div class="container">
-   
-   
-    <div class="card"  style="margin-top: 150px;">
-      <div  class="carre">
-        <div class="text">
-          <h1>Livres Politiques</h1>
-        </div>
+    <div class="container" id="">
 
-        <div class="image">
-          <img src="../picture/politiqu4-removebg-preview.png" alt="" height="100px" width="100px">
-        </div>
-        <div class="prix">
-          <div class="titre">MANDELA</div>
-          <div class="price">Prix:200$</div>
-        </div>
-        <div class="bouton">
-          <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
-          <div class="texte">Ajouter Au Panier</div>
-        </div>
-
-
-      </div>
-      <div  class="carre">
-        <div class="image"><img src="../picture/politiqu4-removebg-preview.png" alt="" height="100px" width="100px"></div>
-        <div class="prix">
-          <div class="titre">MANDELA</div>
-          <div class="price">Prix:200$</div>
-        </div>
-        <div class="bouton">
-          <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
-          <div class="texte">Ajouter Au Panier</div>
-        </div>
-      </div>
-
-      <div class="carre">
-        <div class="image">
-          <img src="../picture/politiqu4-removebg-preview.png" alt="" height="100px" width="100px">
-        </div>
-        <div class="prix">
-          <div class="titre">MANDELA</div>
-          <div class="price">Prix:200$</div>
-        </div>
-        <div class="bouton">
-          <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
-          <div class="texte">Ajouter Au Panier</div>
-          <a href="./politique" class="bouton2">voir plus</a>
-        </div>
-      </div>
+      <div class="card"  style="margin-top: 90px;">
+        <% let displayedArticlesPolitique = 0; %>
       
-    </div>
-  </div>
+      <% articles.forEach(function(article) { %>
+        <% if (article.categorie === 'politique' && displayedArticlesPolitique < 3) { %>
+          <!-- Votre code HTML pour afficher un article ici -->
+          <div class="carre">
+            <a class="image" href="/detail/<%= article._id %>"><img src="/<%= article.image %>" alt="" height="100px" width="100px"></a>
+            <div class="prix">
+              <div class="titre"><%= article.title %></div>
+              <div class="price"><%= article.prix %>$</div>
+            </div>
+            <div class="bouton">
+              <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+              <div class="texte">Ajouter Au Panier</div>
+            </div>
+          </div>
+      
+          
+          <!-- Fin du code HTML de l'article -->
+      
+          <% displayedArticlesPolitique++; %>
+        <% } %>
+      <% }); %>
+      
+      
+      
+            
+            
+      </div>
+      <a href="/politique">voir plus</a>
+        </div>
+     
     <!-- partie livre sportif -->
-  <div class="container">
-   
-   
-    <div class="card" style="margin-top: 150px;">
-      <div  class="carre">
-        <div class="text">
-          <h1>Livres Sportif</h1>
-        </div>
+    <div class="container" id="">
 
-        <div class="image">
-          <img src="../picture/sport1-removebg-preview.png" alt="" height="100px" width="100px">
-        </div>
-        <div class="prix">
-          <div class="titre">PELE</div>
-          <div class="price">Prix:200$</div>
-        </div>
-        <div class="bouton">
-          <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
-          <div class="texte">Ajouter Au Panier</div>
-        </div>
-
-
-      </div>
-      <div  class="carre">
-        <div class="image"><img src="../picture/sport1-removebg-preview.png" alt="" height="100px" width="100px"></div>
-        <div class="prix">
-          <div class="titre">PELE</div>
-          <div class="price">Prix:200$</div>
-        </div>
-        <div class="bouton">
-          <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
-          <div class="texte">Ajouter Au Panier</div>
-        </div>
-      </div>
-
-      <div class="carre">
-        <div class="image">
-          <img src="../picture/sport1-removebg-preview.png" alt="" height="100px" width="100px">
-        </div>
-        <div class="prix">
-          <div class="titre">PELE</div>
-          <div class="price">Prix:200$</div>
-        </div>
-        <div class="bouton">
-          <div class="img"><a href=""><img src=".../picture/panier.svg" alt=""></a></div>
-          <div class="texte">Ajouter Au Panier</div>
-        </div>
-        <a href="./sportif" class="bouton2">voir plus</a>
-      </div>
+ 
+ 
+      <div class="card"  style="margin-top: 90px;">
+        <% let displayedArticlesSportif = 0; %>
       
-    </div>
-
-  </div>
+      <% articles.forEach(function(article) { %>
+        <% if (article.categorie === 'sportif' && displayedArticlesSportif < 3) { %>
+          <!-- Votre code HTML pour afficher un article ici -->
+          <div class="carre">
+            <a class="image" href="/detail/<%= article._id %>">
+              <img src="/<%= article.image %>" alt="" height="100px" width="100px">
+            </a>
+            <div class="prix">
+              <div class="titre"><%= article.title %></div>
+              <div class="price"><%= article.prix %>$</div>
+            </div>
+            <div class="bouton">
+              <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+              <div class="texte">Ajouter Au Panier</div>
+            </div>
+          </div>
+      
+          
+          <!-- Fin du code HTML de l'article -->
+      
+          <% displayedArticlesSportif++; %>
+        <% } %>
+      <% }); %>
+      
+      
+      
+            
+            
+      </div>
+        </div>
+        <a href="/islamique">voir plus</a>
 </div>
     <% }%>
     
