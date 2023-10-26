@@ -117,7 +117,7 @@ input[type="checkbox"] {
   .menu {
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: #eab52e;
     right: 0;
     left: 0;
     text-align: center;

@@ -16,6 +16,7 @@ router.get("/profil", premierPage.ProfilPage);
 router.get("/detail/:id",premierPage.detailPage)
 router.get("/profil/editer", premierPage.editPage);
 router.get("/contact", premierPage.contactPage);
+router.get("/panier", premierPage.panierPage);
 router.get("/islamique", premierPage.islamiquetPage);
 router.get("/politique", premierPage.politiquePage);
 router.get("/sportif", premierPage.sportiftPage);

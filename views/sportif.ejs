@@ -26,7 +26,7 @@
           <li><a href="/" id="principale"></a></li>
 
           <li>
-            <a href=""
+            <a href="./panier"
               ><img src="../picture/panier.svg" alt="" /><span id="count">(0)</span></a
             >
           </li>
@@ -65,7 +65,7 @@
            
      
     <% articles.forEach(function(article) { %>
-      <% if (article.categorie === 'islam') { %>
+      <% if (article.categorie === 'sportif') { %>
          <!-- Votre code HTML pour afficher un article ici -->
          <div class="carre">
            <a class="image"href="/detail/<%= article._id %>"><img src="<%= article.image %>" alt="" height="100px" width="100px"></a>

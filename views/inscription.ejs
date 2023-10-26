@@ -13,6 +13,11 @@
         <div class="croix">
           <a href="/"><img src="/picture/ferme1.png" alt="" /></a>
         </div>
+        <% if (typeof alerte !="undefined" && alerte) { %>
+          <div class="validation">
+            <%= alerte %> <br>
+          </div>
+        <% }%>
         <h3>Inscription</h3>
         <form method="post" action="/inscription">
           <div class="input">

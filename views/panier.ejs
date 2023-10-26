@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style2.css" />
+    <link rel="stylesheet" href="/css/panier.css" />
+    <link rel="stylesheet" href="/css/hearder2.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/hearder2.css">
   </head>
   <body>
     <nav class="navbar">
@@ -20,14 +20,16 @@
 
         <div class="menu">
           <li><a href="index2">Accueil</a></li>
-          <li><a href="politique" class="active">Politique</a></li>
+          <li><a href="index2">Livres</a></li>
           <li><a href="contact">Contact</a></li>
 
           <li><a href="/" id="principale"></a></li>
 
           <li>
-            <a href="./panier"
-              ><img src="../picture/panier.svg" alt="" /><span id="count">(0)</span></a
+            <a href="./panier"  
+              ><img src="../picture/panier.svg" alt="" /><span id="count" style="color: #298fc2;"
+                >(0)</span
+              ></a
             >
           </li>
           <li>
@@ -46,48 +48,40 @@
       </ul>
     </nav>
 
-
-
     <div class="partie1">
-      <div class="carre1"></div>
-      <div class="carre2"></div>
-    </div>
-  
+      <div class="card2">
 
-    <!-- partie livre islamique -->
-    <% if (articles) { %>
-      <div class="parent">
-       <div class="container" id="">
-     
+       <div class="div1">
+        <div class="divadiva">Image</div>
+        <div class="divadiva">Produit</div>
+        <div class="divadiva">Prix</div>
+        <div class="divadiva">Quantité</div>
+        <div class="divadiva">Totale</div>
+        <div class="divadiva">Retirer</div>
+       </div>
+
+       <div class="div2">
+        <div class="image">Image</div>
+        <div class="produit">Produit1</div>
+        <div class="prix">200£</div>
+        <div class="quantité"><span class="moin" style="font-size: 20px;">-</span>   <span class="nonbre">1</span>   <span class="plus" style="font-size: 20px;">+</span></div>
+        <div class="totale">200£</div>
+        <div class="supp"><img src="/picture/supprimer.svg" alt="" height="30px" width="30px"></div>
+       </div>
+       <div class="div3"><p>Totaux Panier:<span class="totalePanier">200£</span></p>
       
+      </div>
+       <div class="div4">
+        <a class="car">Ajouter Article</av>
+        <a class="car">Continuer La Commande</a>
+       </div>
+       
+      </div>
+
+      <!-- bien -->
+
       
-     <div class="card"  style="margin-top: 90px;">
-           
-     
-     <% articles.forEach(function(article) { %>
-       <% if (article.categorie === 'politique') { %>
-         <!-- Votre code HTML pour afficher un article ici -->
-         <div class="carre">
-           <a class="image" href="/detail/<%= article._id %>"><img src="<%= article.image %>" alt="" height="100px" width="100px"></a>
-           <div class="prix">
-             <div class="titre"><%= article.title %></div>
-             <div class="price"><%= article.prix %>$</div>
-           </div>
-           <div class="bouton" value='<%= article._id %>'>
-             <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
-             <div class="texte">Ajouter Au Panier</div>
-           </div>
-         </div>
-     
-         
-         <!-- Fin du code HTML de l'article -->
-     
-         
-       <% } %>
-     <% }); %>
-</div>
-     <% }%>
-     
+    </div>
 
     <footer>
       <div class="box">
@@ -96,7 +90,7 @@
             A propos
             <div class="urderline"><span></span></div>
           </h3>
-          <p class="tt" style="font-size: 14px" >
+          <p class="tt" style="font-size: 14px">
             Hello ,nous somme <strong>MdServices</strong> un site de librairie  en ligne légal 
             . Vous y retrouverez de nombreux livres,des
               livres sportifs politiques ainsi que des livres islamique
@@ -111,14 +105,14 @@
           <p>
             <a href=""><img src="/picture/facebook.svg" alt="" /></a>
             <a href="" style="margin-left: 5px; margin-right: 5px">
-              <img src="/picture/whatsapp-128.svg" alt=""
+              <img src="/picture/telegram.svg" alt=""
             /></a>
-            <a href=""><img src="/picture/telegram.svg" alt="" /></a>
+            <a href=""><img src="/picture/whatsapp-128.svg" alt="" /></a>
           </p>
         </div>
         <div class="card3">
           <h3 class="titre">
-            Contacter Nous
+            Contactez Nous
             <div class="urderline"><span></span></div>
           </h3>
           <p>01 53 53 50 65</p>
@@ -129,7 +123,5 @@
       <hr />
       <div class="copy">copyright © 2023 mena - côte d'ivoire</div>
     </footer>
-    <script src="../js_frontend/index2.js"></script>
-    <script src="../js_frontend/panier.js"></script>
   </body>
 </html>

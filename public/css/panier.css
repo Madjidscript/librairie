@@ -1,0 +1,74 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.partie1 {
+  width: auto;
+  margin: 0px auto;
+  height: auto;
+  background-color: #ccc;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.partie1 .card2 {
+  width: 80%;
+  height: auto !important;
+  padding: 20px;
+  background-color: #eab52e;
+  border: 1px solid #298fc2;
+  text-align: center;
+  border-radius: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.div1,.div2,.div3,.div4{
+  width: 90%;
+  height: 70px;
+ 
+  /* background-color: red; */
+  margin-top: 20px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+.div1{
+  background-color: none;
+  border-bottom: 3px solid #298fc2;
+  color: white;
+  font-weight: bold;
+}
+.div2 .quantité .nonbre{
+  width: auto;
+  padding: 10px;
+  border: 2px solid white;
+}
+
+.div3 p{
+/* background-color: #ccc; */
+ text-align: center;
+ align-items: center;
+ margin: 0px auto;
+ font-size: 20px;
+}
+
+.div4 .car{
+  width: auto;
+  height: auto;
+  padding: 15px;
+  background-color: white;
+  border-radius: 100px;
+  color: #eab52e;
+  font-weight: bold;
+  margin-bottom: 4px;
+}

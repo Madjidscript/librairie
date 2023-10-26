@@ -26,7 +26,7 @@
           <li><a href="/" id="principale"></a></li>
 
           <li>
-            <a href=""
+            <a href="./panier"
               ><img src="../picture/panier.svg" alt="" /><span id="count">(0)</span></a
             >
           </li>
@@ -48,17 +48,16 @@
 
 
 
-    <div class="partie1">
-     
-    </div>
+    <div class="partie1"></div>
   
-
+    <div class="grand"><div class="text"><h1>Islamique</h1></div></div>
     <!-- partie livre islamique -->
     <% if (articles) { %>
  <div class="parent">
+  
   <div class="container" id="">
 
- 
+    
  
 <div class="card"  style="margin-top: 90px;">
   <% let displayedArticlesIslam = 0; %>
@@ -85,14 +84,15 @@
   <% } %>
 <% }); %>
 
-
+<div class="grands"><a href="/islamique" class="format" >voir plus</a></div></div>
 
       
       
 </div>
   </div>
-  <a href="/islamique">voir plus</a>
+  
     <!-- partie livre Politique -->
+    <div class="grand"><div class="text"><h1>Islamique</h1></div></div>
     <div class="container" id="">
 
       <div class="card"  style="margin-top: 90px;">
@@ -125,10 +125,11 @@
             
             
       </div>
-      <a href="/politique">voir plus</a>
+      <div class="grands"><a href="/politique" class="format" >voir plus</a></div></div>
         </div>
      
     <!-- partie livre sportif -->
+    <div class="grand"><div class="text"><h1>Islamique</h1></div></div>
     <div class="container" id="">
 
  
@@ -166,7 +167,8 @@
             
       </div>
         </div>
-        <a href="/islamique">voir plus</a>
+        
+        <div class="grands"><a href="/sportif" class="format" >voir plus</a></div></div>
 </div>
     <% }%>
     

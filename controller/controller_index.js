@@ -8,8 +8,16 @@ const Categorie = require("../model/categorie");
 
 
 const premierPage = class {
-  static firstChild = (req = request, res = response) => {
-    res.render("index");
+  static firstChild = async(req = request, res = response) => {
+    
+    try {
+      const Articles = await Article.find().exec();
+      console.log("mes article",Articles)      
+     return res.render("index",{articles:Articles});
+
+     } catch (error) {
+      console.log(error);
+     }
   };
 
   static secondchild = async (req = request, res = response) => {
@@ -83,8 +91,16 @@ const premierPage = class {
   };
   static inscriptionPagePost = async(req = request, res = response) => {
     console.log('recuperation info user',req.body);
-    const user = new User(req.body);
+   
+    
+    const userone = await User.findOne({email:req.body.email}).exec()
+    console.log("mon user",userone);
+    if (userone) {
+      res.render('inscription',{alerte:"l'email existe deja"})
+    } else {
+      const user = new User(req.body);
     try {
+
       const saveUser = await user.save();
       res.status(201).redirect('/connexion');
     } catch (error) {
@@ -95,6 +111,8 @@ const premierPage = class {
 
       
     }
+    }
+    
   };
 
   static ProfilPage = (req = request, res = response) => {
@@ -181,7 +199,7 @@ console.log("mon id",articleId);
        res.redirect('/connexion')
      }
   };
-  
+
   static categoriePage = (req = request, res = response) => {
       res.render("categorieForm");
   };
@@ -212,6 +230,16 @@ console.log("mon id",articleId);
         res.status(400).render("articleForm",{alert:"un problemme est survenue"}); 
       }
   };
+
+  static panierPage = (req = request, res = response) => {
+    if (req.session.user) {
+      return res.render("panier",{user:req.session.user});
+    }else{
+      res.redirect("/connexion");
+    }
+    
+  };
+
   static deconnexionPage = (req = request, res = response) => {
   req.session.destroy()
   res.redirect('/connexion');

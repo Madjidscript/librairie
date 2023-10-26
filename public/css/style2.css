@@ -33,19 +33,42 @@
   padding-bottom: 20px;
   /* background-color: white; */
 }
+.grand{
+  width:65%;
+  height:auto;
+  background-color: red;
+  margin: 0px auto;
+  
+}
+.grands{
+  width:65%;
+  height: 70px;;
+  margin: 0px auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.grands .format{
+  width: 120px;
+  height: auto;
+  padding: 15px;
+  background-color: #298fc2;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 100px;
+}
 .text {
   color: black;
-
   padding: 15px;
   font-size: 10px;
-  top: -70px;
-  left: 10px;
   font-weight: normal;
   background-color: #eab52e;
   border-radius: 0px 68px 0px 0px;
   border-bottom: 2px solid #298fc2;
-  width: 200px;
+  width: 180px;
   position: absolute;
+  padding: 15px 25px;
 }
 .container .card {
   display: flex;
