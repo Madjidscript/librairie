@@ -94,9 +94,9 @@
   /* overflow: hidden; */
 }
 .container .card .carre:hover {
-  scale: 1.1;
-  transition: 2s;
-  margin: 10px 30px;
+  /* scale: 1.1; */
+  /* transition: 2s; */
+  /* margin: 10px 30px; */
 }
 
 .container .card .carre .image {

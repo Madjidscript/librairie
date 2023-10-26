@@ -68,13 +68,13 @@
        <% if (article.categorie === 'politique') { %>
          <!-- Votre code HTML pour afficher un article ici -->
          <div class="carre">
-           <a class="image" href="/detail/<%= article._id %>"><img src="<%= article.image %>" alt="" height="100px" width="100px"></a>
+           <a class="image" href="/detail/<%= article._id %>"><img src="<%= article.image %>" alt="" height="100px" width="100px" class="imgArticle"></a>
            <div class="prix">
              <div class="titre"><%= article.title %></div>
              <div class="price"><%= article.prix %>$</div>
            </div>
            <div class="bouton" value='<%= article._id %>'>
-             <div class="img"><a href=""><img src="../picture/panier.svg" alt=""></a></div>
+             <div class="img"><a href="#" class="btn"><img src="../picture/panier.svg" alt="" ></a></div>
              <div class="texte">Ajouter Au Panier</div>
            </div>
          </div>
@@ -85,6 +85,8 @@
          
        <% } %>
      <% }); %>
+</div>
+</div>
 </div>
      <% }%>
      
@@ -129,7 +131,7 @@
       <hr />
       <div class="copy">copyright © 2023 mena - côte d'ivoire</div>
     </footer>
-    <script src="../js_frontend/index2.js"></script>
-    <script src="../js_frontend/panier.js"></script>
+    <script src="/js/panier1.js"></script>
+   
   </body>
 </html>
