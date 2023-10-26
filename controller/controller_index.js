@@ -60,8 +60,12 @@ const premierPage = class {
         let dataUser = {
           nom:user.nom,
           email:user.email,
-          numero:user.numero
+          numero:user.numero,
+          password:user.password,
+          id:user._id
+
         }
+      
         req.session.user = dataUser;
         console.log("ma session est :",req.session);
       
@@ -142,12 +146,40 @@ console.log("mon id",articleId);
   };
 
   static editPage = (req = request, res = response) => {
+    
     if (req.session.user) {
-     res.render("edit");
+      const userId = req.session.user.id;
+      console.log("mon premierid");
+     res.render("edit",{userid:userId,user:req.session.user});
+     
     } else {
       res.redirect('/connexion')
     }
   };
+
+
+
+static editPost = async (req = request, res = response) => {
+  const userId = req.session.user.id;
+  try {
+    const user = await User.findByIdAndUpdate(userId, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    if (!user) return res.status(404).send("L'utilisateur n'existe pas");
+    res.redirect('/profil');
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+
+
+
+
+
+
+
+
 
   static contactPage = (req = request, res = response) => {
     if (req.session.user) {
@@ -203,15 +235,7 @@ console.log("mon id",articleId);
   static categoriePage = (req = request, res = response) => {
       res.render("categorieForm");
   };
-  static categoriePagePost =async (req = request, res = response) => {
-      const categories = new Categorie(req.body);
-    try {
-      const saveCategories = await categories.save();
-      res.status(201).redirect('/categorieForm');
-    } catch (error) {
-      res.status(400).render("categorieForm",{alert:"un problemme est survenue"}); 
-    }
-  };
+  
   static articlePage = (req = request, res = response) => {
       res.render("articleForm");
   };

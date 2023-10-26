@@ -15,13 +15,13 @@ router.post('/inscription',premierPage.inscriptionPagePost)
 router.get("/profil", premierPage.ProfilPage);
 router.get("/detail/:id",premierPage.detailPage)
 router.get("/profil/editer", premierPage.editPage);
+router.post("/profil/editer", premierPage.editPost);
 router.get("/contact", premierPage.contactPage);
 router.get("/panier", premierPage.panierPage);
 router.get("/islamique", premierPage.islamiquetPage);
 router.get("/politique", premierPage.politiquePage);
 router.get("/sportif", premierPage.sportiftPage);
 router.get("/categorieForm", premierPage.categoriePage);
-router.post("/categorieForm", premierPage.categoriePagePost);
 router.get("/articleForm", premierPage.articlePage);
 router.post("/articleForm", upload.single('image'),premierPage.articlePagePost);
 router.get("/deconnexion", premierPage.deconnexionPage);

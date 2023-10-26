@@ -14,13 +14,14 @@
           <a href="../index2"><img src="/picture/ferme1.png" alt="" /></a>
         </div>
         <h3>Editer</h3>
-        <form>
+        <form method="post" action="/profil/editer">
           <div class="input">
             <div class="champs" style="margin-bottom: 60px; margin-top: 25px">
               <input
                 type="text"
                 name="nom"
                 id="nom"
+                value="<%= user.nom %>"
                 placeholder="   enter votre nom"
               />
             </div>
@@ -29,6 +30,7 @@
                 type="email"
                 name="email"
                 id="email"
+                value="<%= user.email %>"
                 placeholder="   entrer votre mail"
               />
             </div>
@@ -37,6 +39,7 @@
                 type="password"
                 name="password"
                 id="password"
+                value="<%= user.password %>"
                 placeholder="  entrer votre mot de pass"
               />
             </div>
@@ -45,6 +48,7 @@
                 type="number"
                 name="numero"
                 id="numero"
+                value="<%= user.numero %>"
                 placeholder="  entrer votre contact"
               />
             </div>
